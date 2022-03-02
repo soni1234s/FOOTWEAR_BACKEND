@@ -140,6 +140,9 @@ app.post("/otp", (req, res) => {
 // }
 
 //routes
+app.get("/", (req, res) => {
+  res.send("hello");
+})
 app.get("/cart", async (req, res) => {
   const data = await Item.find();
   res.send(data);
