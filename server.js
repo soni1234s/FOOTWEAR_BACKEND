@@ -215,7 +215,7 @@ app.post("/signin", async (req, res) => {
       res.status(400).json({ error: "INVALID CREDENTIALS" });
     }
   } catch (err) {
-    //console.log(err);
+    console.log(err);
   }
 });
 
