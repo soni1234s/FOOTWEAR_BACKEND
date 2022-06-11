@@ -8,7 +8,7 @@ const body_parser = require("body-parser");
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
 
-const port = process.env.PORT || 4000;
+// const port = process.env.PORT || 4000;
 
 //schemas
 const Item = require("../Schemas/itemSchema");
@@ -21,66 +21,6 @@ app.use(cors());
 app.use(express.json());
 
 //mail sent
-// var nodemailer = require("nodemailer");
-
-// var transporter = nodemailer.createTransport({
-//   host: process.env.SMPT_HOST,
-//     port: process.env.SMPT_PORT,
-//     service: process.env.SMPT_SERVICE,
-//     auth: {
-//       user: process.env.SMPT_MAIL,
-//       pass: process.env.SMPT_PASSWORD
-//     },
-// });
-
-// //otp
-// app.post("/otp", (req, res) => {
-//   console.log("hlo")
-//   const { email, otp, adr, city, state, image, title, price, name } = req.body;
-//   //console.log("hlo")
-//   var mailOptions;
-
-//   if(!adr && !city && !state && !image && !title && !price){
-
-//     const sendmail = require('sendmail')();
- 
-//     sendmail({
-//         from: 'footwears191@gmail.com',
-//         to: 'sumitsoni90881@gmail.com',
-//         subject: 'test sendmail',
-//         html: 'Mail of test sendmail ',
-//       }, function(err, reply) {
-//         console.log(err && err.stack);
-//         console.dir(reply);
-//     });
-
-
-//     // mailOptions = {
-//     //   from: process.env.SMPT_MAIL,
-//     //   to: email,
-//     //   subject: "Otp For Verify Your Mail id..",
-//     //   text: `Hi ${name} , Your Otp is ${otp}`,
-//     // };
-
-//   }else{
-//     mailOptions = {
-//       from: process.env.SMPT_MAIL,
-//         to: email,
-//       subject: 'YOUR ORDER WAS SUCCESSFULLY PLACED',
-//       html: `<div> <h1>YOUR ITEM</h1> <div><img src=${image} alt="..."/> <div> <h2>${title}</h2> <h3>₹ ${price}</h3> </div></div>  <ul> <li>city : ${city}</li> <li>state : ${state}</li> <li>address : ${adr}</li></ul></div>`
-//     }
-//   }
-
-
-//   transporter.sendMail(mailOptions, function (error, info) {
-//     if (error) {
-//       console.log(error);
-//     } else {
-//       res.status(200).json({ message: "OTP SENT SUCCESSFULLY!" });
-//       console.log("Email sent: " + info.response);
-//     }
-//   });
-// });
 
 
 //router-cart
